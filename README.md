@@ -11,10 +11,10 @@ Diante desse cenário, surge o problema real tratado nesse trabalho: O que afeta
 ---
 
 ## 🔗 Base de Dados Utilizada
-O projeto utiliza parte do conjunto de dados públicos da **Olist**, disponibilizado originalmente no Kaggle:
+O projeto utiliza parte do conjunto de dados públicos da Olist, disponibilizado originalmente no Kaggle:
 
-**Link da base completa:**  
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data
+**Link da base completa:**
+[Olist Brazilian E-Commerce Dataset (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
 
 Datasets utilizados no projeto:
 - `olist_orders_dataset.csv`  
