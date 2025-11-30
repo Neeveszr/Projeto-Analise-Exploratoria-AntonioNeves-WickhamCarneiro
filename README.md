@@ -41,7 +41,7 @@ O objetivo final foi construir um dataset limpo, padronizado e enriquecido, capa
 
 ---
 
-## 🛠️ Descrição do Processo de Tratamento dos Dados
+## 🛠️ Descrição do Processo de Tratamento dos Dados (Informações detalhadas estão no relatório)
 
 O pré-processamento dos dados foi realizado seguindo uma sequência estruturada de etapas para garantir consistência, qualidade e confiabilidade das análises. As principais fases foram:
 
