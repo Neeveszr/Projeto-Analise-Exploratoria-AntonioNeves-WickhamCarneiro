@@ -40,44 +40,39 @@ O objetivo final foi construir um dataset limpo, padronizado e enriquecido, capa
 
 ## 🛠️ Descrição do Processo de Tratamento dos Dados
 
-O pré-processamento seguiu as etapas ensinadas em aula:
+O pré-processamento dos dados foi realizado seguindo uma sequência estruturada de etapas para garantir consistência, qualidade e confiabilidade das análises. As principais fases foram:
 
-### **1. Exploração Inicial**
-- Uso de `df.head()`, `df.info()` e `df.describe()`  
-- Identificação de tipos, estatísticas e valores ausentes  
-- Visualizações iniciais com heatmap para correlação
+### **1. Carregamento e Exploração Inicial**
+Iniciamos com a inspeção das bases utilizando `df.head()`, `df.info()` e `df.describe()`.  
+Essa etapa permitiu identificar tipos de dados, presença de valores ausentes, estatísticas descritivas e possíveis problemas iniciais.
 
-### **2. Tratamento de Valores Ausentes**
-- Preenchimento por mediana para variáveis numéricas  
-- Categoria “desconhecido” para valores ausentes em texto  
-- Identificação de alta ausência no dataset de produtos
+### **2. Identificação dos Valores Ausentes**
+Com o comando `df.isnull().sum()`, contabilizamos a quantidade de valores ausentes em cada coluna.  
+Isso permitiu definir quais atributos precisavam de imputação ou tratamento específico.
 
-### **3. Remoção/Correção de Inconsistências**
-- Padronização textual (`str.lower()`, `str.strip()`)  
-- Correção de pesos iguais a zero ou negativos  
-- Conversão de colunas de data para `datetime`
+### **3. Tratamento dos Valores Ausentes**
+- Variáveis numéricas receberam **imputação pela mediana por categoria**, garantindo coerência com o comportamento dos produtos.  
+- Colunas categóricas tiveram seus valores ausentes substituídos por `"desconhecido"`.
 
-### **4. Outliers**
-- Analisados via estatísticas e gráficos  
-- **Apenas valores inválidos foram corrigidos**  
-- Outliers reais foram mantidos por representarem casos legítimos (ex.: móveis caros)
+### **4. Correção de Inconsistências**
+- Valores impossíveis, como **pesos igual a zero ou negativos**, foram substituídos pela mediana da respectiva categoria de produto.  
+- Realizamos padronização textual (`str.lower()` + `str.strip()`) para evitar categorias duplicadas devido a diferenças de maiúsculas/minúsculas ou espaços extras.
 
-### **5. Conversão e Padronização de Tipos**
-- Datas → `datetime`  
-- Quantidades numéricas → `int64`
+### **5. Codificação das Variáveis Categóricas**
+Aplicamos **One-Hot Encoding** (`pd.get_dummies`) na coluna `order_status`, permitindo que os modelos e análises futuras trabalhem com variáveis categóricas de forma numérica e interpretável.
 
-### **6. Codificação de Dados Categóricos**
-- One-Hot Encoding aplicado em `order_status`
+### **6. Normalização / Padronização das Variáveis Numéricas**
+Utilizamos o **StandardScaler** para padronizar atributos numéricos, garantindo escalas equivalentes entre variáveis e evitando distorções em análises que dependem de magnitude.
 
-### **7. Normalização**
-- Padronização com StandardScaler em atributos numéricos selecionados
+### **7. Criação de Novas Features (Feature Engineering)**
+Foram criados atributos que enriquecem a análise logística:
+- **Tempo de entrega (delivery_delay_days)** – atraso/adiantamento em dias  
+- **Atraso binário (is_late_delivery)** – indicador de atraso  
+- **Densidade do produto**  
+- **Volume do produto**  
+- **Custo logístico por peso (freight_per_kg)**
 
-### **8. Feature Engineering**
-Criação das seguintes features:
-- `delivery_delay_days` – dias de atraso/adiantamento  
-- `is_late_delivery` – atraso binário  
-- `processing_time_days` – tempo que o vendedor levou para despachar  
-- `freight_per_kg` – custo logístico proporcional ao peso  
+Essas features permitiram compreender melhor o comportamento logístico e identificar relações não visíveis nas colunas originais.
 
 ---
 
