@@ -19,15 +19,9 @@ Datasets utilizados no projeto:
 - `olist_products_dataset.csv`
 
 Olist_order_items_dataset – Itens vendidos em cada pedido
-Esse dataset relaciona cada pedido aos produtos comprados, representa apenas compras reais, por isso foi usada como tabela principal no processo de merge, pra evitar pedidos incompletos e cancelados.
-Tem atributos como: order_id, Product_id, seller_id, order_item_id, price, freight_value, shipping_limit_date
-
 Olist_orders_dataset – Informações dos pedidos
-Esse dataset tem os dados de cada pedido realizado na plataforma, tem atributos como: order_id, custumer_id, order_status e datas do processo.
-
 Olist_products_dataset – Informações dos produtos
-Esse dataset tem atributos de cada produto vendido, tem atributos como: Product_id, Product_category_name, Product_name_lenght, Product_description_lenght, Product_photos_qty.
-Esse dataset em específico possui vários valores ausentes, o que veremos depois.
+
 ---
 
 ## 🎯 Objetivo do Projeto
