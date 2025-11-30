@@ -71,9 +71,8 @@ Utilizamos o **StandardScaler** para padronizar atributos numéricos, garantindo
 Foram criados atributos que enriquecem a análise logística:
 - **Tempo de entrega (delivery_delay_days)** – atraso/adiantamento em dias  
 - **Atraso binário (is_late_delivery)** – indicador de atraso  
-- **Densidade do produto**  
-- **Volume do produto**  
-- **Custo logístico por peso (freight_per_kg)**
+- **Dias de processamento (delivery_time_days)**  
+- **Custo do frete por peso (freight_per_kg)**
 
 Essas features permitiram compreender melhor o comportamento logístico e identificar relações não visíveis nas colunas originais.
 
