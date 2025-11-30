@@ -30,11 +30,11 @@ Olist_products_dataset – Informações dos produtos
 ## 🎯 Objetivo do Projeto
 Aplicar o ciclo de vida da Ciência de Dados para descobrir o que afeta a experiência e satisfação do cliente no e-commerce brasileiro, investigando os padrões que influenciam:
 
-● Atrasos de entrega
-● Baixa ou alta satisfação
-● Diferenças de preço e frete
-● Categorias de produtos problemáticas
-● Variações no tempo de processamento e envio
+- Atrasos de entrega
+- Baixa ou alta satisfação
+- Diferenças de preço e frete
+- Categorias de produtos problemáticas
+- Variações no tempo de processamento e envio
 
 
 O objetivo final foi construir um dataset limpo, padronizado e enriquecido, capaz de gerar insights relevantes sobre desempenho logístico e experiência do cliente.
