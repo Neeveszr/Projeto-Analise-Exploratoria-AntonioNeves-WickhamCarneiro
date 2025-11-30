@@ -93,19 +93,19 @@ Essas features permitiram compreender melhor o comportamento logístico e identi
 
 Foi revelado padrões importantes, as conclusões principais foram:
 
-1. **Atrasos dependem tanto do vendedor quanto da transportadora**  
+- **Atrasos dependem tanto do vendedor quanto da transportadora**  
    O tempo que o vendedor leva para processar e despachar o pedido tem forte impacto no atraso final, mostrando que a responsabilidade logística é compartilhada.
 
-2. **Peso e dimensões influenciam diretamente o valor do frete**  
+- **Peso e dimensões influenciam diretamente o valor do frete**  
    Produtos pesados ou volumosos, especialmente móveis, eletrodomésticos e utilidades domésticas grandes, apresentam fretes mais altos devido à complexidade do transporte.
 
-3. **A maioria dos pedidos é entregue no prazo ou antes**  
+- **A maioria dos pedidos é entregue no prazo ou antes**  
    A distribuição do atraso mostra uma operação estável, com poucas entregas realmente atrasadas.
 
-4. **Os dados apresentavam inconsistências relevantes**  
+- **Os dados apresentavam inconsistências relevantes**  
    Foram encontrados pesos inválidos, textos despadronizados e muitos valores ausentes no dataset de produtos. O pré-processamento foi essencial para corrigir esses problemas e garantir análises consistentes.
 
-5. **As novas features ampliaram a compreensão logística**  
+- **As novas features ampliaram a compreensão logística**  
    As variáveis criadas (`delivery_delay_days`, `is_late_delivery`, `processing_time_days`, `freight_per_kg`) ajudaram a explicar padrões de atraso, eficiência de vendedores e comportamento do frete de forma mais clara do que os dados originais permitiam.
 
 
